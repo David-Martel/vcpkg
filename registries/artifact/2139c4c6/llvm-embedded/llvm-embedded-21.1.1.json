@@ -1,0 +1,52 @@
+{
+  "id": "compilers/arm/llvm-embedded",
+  "version": "21.1.1",
+  "description": "An LLVM compiler (clang)-based tool suite for C/C++, and assembly programming on 32-bit Arm Cortex-A, Cortex-M, and Cortex-R processors.",
+  "summary": "LLVM Embedded Toolchain for Arm CPUs",
+  "contacts": {
+    "Jonatan Antoni": {
+      "email": "jonatan.antoni@arm.com",
+      "role": "publisher"
+    }
+  },
+  "demands": {
+    "windows": {
+      "install": {
+        "unzip": "https://artifacts.tools.arm.com/llvm-embedded/21.1.1/ATfE-21.1.1-Windows-x86_64.zip",
+        "sha256": "e1ed2d108e983b4489f9f2c1e6ea89f5124cff38a16aab2c59bfce8eff630346",
+        "strip": 0
+      }
+    },
+    "linux and x64": {
+      "install": {
+        "untar": "https://artifacts.tools.arm.com/llvm-embedded/21.1.1/ATfE-21.1.1-Linux-x86_64.tar.xz",
+        "sha256": "fd7fcc2eb4c88c53b71c45f9c6aa83317d45da5c1b51b0720c66f1ac70151e6e",
+        "strip": 1
+      }
+    },
+    "linux and arm64": {
+      "install": {
+        "untar": "https://artifacts.tools.arm.com/llvm-embedded/21.1.1/ATfE-21.1.1-Linux-AArch64.tar.xz",
+        "sha256": "dfd93d7c79f26667f4baf7f388966aa4cbfd938bc5cbcf0ae064553faf3e9604",
+        "strip": 1
+      }
+    },
+    "osx": {
+      "install": {
+        "untar": "https://artifacts.tools.arm.com/llvm-embedded/21.1.1/ATfE-21.1.1-Darwin-universal.tar.xz",
+        "sha256": "eaca4a369c0b5bcde0ea8daa323a5b74ae6f3b83defc3550794f60f15c244f90",
+        "strip": 1
+      }
+    },
+    "windows, linux, osx": {
+      "exports": {
+        "paths": {
+          "PATH": "bin"
+        },
+        "tools": {
+          "CLANG_TOOLCHAIN_21_1_1": "./bin/"
+        }
+      }
+    }
+  }
+}

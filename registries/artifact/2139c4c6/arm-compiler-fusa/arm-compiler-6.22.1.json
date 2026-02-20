@@ -1,0 +1,54 @@
+{
+	"id": "compilers/arm/armclang-fusa",
+	"version": "6.22.1",
+	"description": "Arm’s FuSa qualified embedded C/C++ compilation toolchain for the development of bare-metal software, firmware, and Real-Time Operating System (RTOS) applications.",
+	"summary": "Arm Compiler for Embedded FuSa",
+	"contacts": {
+		
+		"ctools": {
+			"email": "support@arm.com",
+			"role": "originator"
+		}
+	},
+	"demands": {
+		"windows": {
+			"install": {
+				"unzip": "https://artifacts.tools.arm.com/arm-compiler-fusa/6.22/139/standalone-win-x86_64-rel.zip",
+				"sha256": "b9943ce8feb77f2aab56f698d256d563f697e19f3f7a1907692f41868810205d",
+				"strip": 0
+			},
+			"exports": {
+   		   	  	"paths": {
+   		       		"PATH": "bin"
+  		  		},
+				"tools": {
+					"AC6_TOOLCHAIN_6_22_1": "./bin/"
+				}
+      		}
+		},
+		"linux and x64": {
+			"install": {
+				"untar": "https://artifacts.tools.arm.com/arm-compiler-fusa/6.22/139/standalone-linux-x86_64-rel.tar.xz",
+				"sha256": "e1a7ab2abbd83cd93445312a442233e6b8013805ab705a1c48b8a085e796a6a2",
+				"strip": 1
+			}
+		},
+		"linux and arm64": {
+			"install": {
+				"untar": "https://artifacts.tools.arm.com/arm-compiler-fusa/6.22/139/standalone-linux-armv8l_64-rel.tar.xz",
+				"sha256": "70154471a3f473c9757fb07836439ae671d4f17a42304551e84dc6aef932d6c0",
+				"strip": 1
+			}
+		},
+		"not windows": {
+			"exports": {
+				"paths": {
+					"PATH": "bin"
+				},
+				"tools": {
+					"AC6_TOOLCHAIN_6_22_1": "./bin/"
+				}
+			}
+		}
+	}
+}

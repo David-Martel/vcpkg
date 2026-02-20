@@ -1,0 +1,72 @@
+{
+  "id": "compilers/arm/arm-none-eabi-gcc",
+  "version": "13.3.1",
+  "description": "The GNU Arm Embedded Toolchain for C/C++, and assembly programming on 32-bit Arm Cortex-A, Arm Cortex-M, and Arm Cortex-R processors.",
+  "summary": "GCC compiler for ARM CPUs",
+  "contacts": {
+    "Joachim Krech": {
+      "email": "joachim.krech@arm.com",
+      "role": "publisher"
+    }
+  },
+  "demands": {
+    "windows": {
+      "install": {
+        "unzip": "https://artifacts.tools.arm.com/arm-none-eabi-gcc/13.3.1/arm-gnu-toolchain-windows-amd64-arm-none-eabi.zip",
+        "sha256": "0e03863e6c4459450724b894a5ad0269c90519ea1217c4616e687b7c3910cd3a",
+        "strip": 0
+      },
+      "exports": {
+        "paths": {
+          "PATH": "bin"
+        },
+        "tools": {
+          "GCC_TOOLCHAIN_13_3_1": "./bin"
+        }
+      },
+      "message": "EULA: https://developer.arm.com/GetEula?Id=d023c29f-8e81-49b0-979f-a5610ea2ccbb"
+    },
+    "linux and x64": {
+      "install": {
+        "untar": "https://artifacts.tools.arm.com/arm-none-eabi-gcc/13.3.1/arm-gnu-toolchain-x86_64-arm-none-eabi.tar.bz2",
+        "sha256": "8f221a84a777f69fd6d621c687d3c00ac5120eba3471bc9b19f6efe544e4477a",
+        "strip": 1
+      }
+    },
+    "linux and arm64": {
+      "install": {
+        "untar": "https://artifacts.tools.arm.com/arm-none-eabi-gcc/13.3.1/arm-gnu-toolchain-aarch64-arm-none-eabi.tar.bz2",
+        "sha256": "b11fd5abc42b902388c100e8ffac1c30a457a9a47f2eca46eeb9d8568e89c036",
+        "strip": 1
+      }
+    },
+    "osx and x64": {
+      "install": {
+        "untar": "https://artifacts.tools.arm.com/arm-none-eabi-gcc/13.3.1/arm-gnu-toolchain-darwin-x86_64-arm-none-eabi.tar.bz2",
+        "sha256": "e3c9dd8f32ae649c01b775bdbb77037a98bf12a533e978e4c33781c3fd43d490",
+        "strip": 1
+      }
+    },
+    "osx and arm64": {
+      "install": {
+        "untar": "https://artifacts.tools.arm.com/arm-none-eabi-gcc/13.3.1/arm-gnu-toolchain-darwin-arm64-arm-none-eabi.tar.bz2",
+        "sha256": "a653ad9dea1695c37cffb6fea39ec446c11b74cebf9cf2eb9ca70e9a32448e37",
+        "strip": 1
+      }
+    },
+    "linux": {
+      "warning": "Ensure libncurses5 is installed with your system package manager before running arm-none-eabi-gdb.",
+      "message": "EULA: https://developer.arm.com/GetEula?Id=d023c29f-8e81-49b0-979f-a5610ea2ccbb"
+    },
+    "not windows": {
+      "exports": {
+        "paths": {
+          "PATH": "bin"
+        },
+        "tools": {
+          "GCC_TOOLCHAIN_13_3_1": "./bin"
+        }
+      }
+    }
+  }
+}

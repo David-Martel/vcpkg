@@ -1,0 +1,54 @@
+{
+    "id": "compilers/arm/armclang-fusa",
+    "version": "6.22.2",
+    "description": "Arm’s FuSa qualified embedded C/C++ compilation toolchain for the development of bare-metal software, firmware, and Real-Time Operating System (RTOS) applications.",
+    "summary": "Arm Compiler for Embedded FuSa",
+    "contacts": {
+
+        "ctools": {
+            "email": "support@arm.com",
+            "role": "originator"
+        }
+    },
+    "demands": {
+        "windows": {
+            "install": {
+                "unzip": "https://artifactory.tools.arm.com/artifactory/arm-compiler-fusa-local/6.22.2/ARMCompiler6.22.2_standalone_win-x86_64.zip",
+                "sha256": "9cc4d7fb986cde284fdcf04913b2caf12e256e90db0a4a5c816dc852f60db659",
+                "strip": 0
+            },
+            "exports": {
+                "paths": {
+                    "PATH": "bin"
+                },
+                "tools": {
+                    "AC6_TOOLCHAIN_6_22_2": "./bin/"
+                }
+            }
+        },
+        "linux and x64": {
+            "install": {
+                "untar": "https://artifactory.tools.arm.com/artifactory/arm-compiler-fusa-local/6.22.2/ARMCompiler6.22.2_standalone_linux-x86_64.tar.gz",
+                "sha256": "63556128879b7f6ba8f7b6c1b01ede8a158762cc0de02e4b059384ef5a7e7cc4",
+                "strip": 1
+            }
+        },
+        "linux and arm64": {
+            "install": {
+                "untar": "https://artifactory.tools.arm.com/artifactory/arm-compiler-fusa-local/6.22.2/ARMCompiler6.22.2_standalone_linux-aarch64.tar.gz",
+                "sha256": "78d1973410900d548a8d13793d8ae25c228daa58ce61259e2bef0362c4720bbd",
+                "strip": 1
+            }
+        },
+        "not windows": {
+            "exports": {
+                "paths": {
+                    "PATH": "bin"
+                },
+                "tools": {
+                    "AC6_TOOLCHAIN_6_22_2": "./bin/"
+                }
+            }
+        }
+    }
+}

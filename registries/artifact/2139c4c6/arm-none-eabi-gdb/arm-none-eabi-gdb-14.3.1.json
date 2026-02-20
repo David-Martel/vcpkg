@@ -1,0 +1,60 @@
+{
+    "id": "debuggers/arm/arm-none-eabi-gdb",
+    "version": "14.3.1",
+    "description": "Arm's embedded GNU debugger for the development of bare-meta software, firmware and Real-Time Operating systems (RTOS) applications",
+    "summary": "GDB debugger for Arm CPUs",
+    "contacts": {
+      "Nikita Venkatesh": {
+        "email": "Nikita.Venkatesh@arm.com",
+        "role": "publisher"
+      }
+    },
+    "demands": {
+      "windows": {
+        "install": {
+          "unzip": "https://artifacts.tools.arm.com/arm-none-eabi-gdb/14.3.1/arm-gnu-toolchain-mingw-w64-x86_64-arm-none-eabi-gdb.zip",
+          "sha256": "523e1a08714bb620da19174126d355ea8eff3818918952f2d8e8b8312b6d8374",
+          "strip": 0
+        },
+        "exports": {
+          "paths": {
+            "PATH": "bin"
+          }
+        },
+        "message": "EULA: https://developer.arm.com/GetEula?Id=3aa52a53-d1cb-414b-b540-eaf29fdef0ca"
+      },
+      "linux and x64": {
+        "install": {
+          "untar": "https://artifacts.tools.arm.com/arm-none-eabi-gdb/14.3.1/arm-gnu-toolchain-x86_64-arm-none-eabi-gdb.tar.xz",
+          "sha256": "9b3ace983e136c995c49bc9f3db070be100fb48a02032fc207545b2f8e06055a",
+          "strip": 1
+        }
+      },
+      "linux and arm64": {
+        "install": {
+          "untar": "https://artifacts.tools.arm.com/arm-none-eabi-gdb/14.3.1/arm-gnu-toolchain-aarch64-arm-none-eabi-gdb.tar.xz",
+          "sha256": "4f0adbd2dc650c67ee6cdf07e272cc2726942112e32076bfec9f5fa401068170",
+          "strip": 1
+        }
+      },
+      "osx and arm64": {
+        "install": {
+          "untar": "https://artifacts.tools.arm.com/arm-none-eabi-gdb/14.3.1/arm-gnu-toolchain-darwin-arm64-arm-none-eabi-gdb.tar.xz",
+          "sha256": "b1be532aaa5d93fe3fa9c0e4477d9516a1e151ff08eba89ca28d58e3d6ff0d18",
+          "strip": 1
+        }
+      },
+      "linux": {
+        "warning": "Ensure libncurses5 is installed with your system package manager before running arm-none-eabi-gdb.",
+        "message": "EULA: https://developer.arm.com/GetEula?Id=3aa52a53-d1cb-414b-b540-eaf29fdef0ca"
+      },
+      "not windows": {
+        "exports": {
+          "paths": {
+            "PATH": "bin"
+          }
+        }
+      }
+    }
+  }
+

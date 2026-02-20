@@ -1,0 +1,61 @@
+{
+	"id": "compilers/arm/armclang",
+	"version": "6.23.0",
+	"description": "Arm’s embedded C/C++ compilation toolchain for the development of bare-metal software, firmware, and Real-Time Operating System (RTOS) applications.",
+	"summary": "Arm Compiler for Embedded",
+	"contacts": {
+		
+		"ctools": {
+			"email": "support@arm.com",
+			"role": "originator"
+		}
+	},
+	"demands": {
+		"windows": {
+			"install": {
+				"unzip": "https://artifacts.tools.arm.com/arm-compiler/6.23/32/standalone-win-x86_64-rel.zip",
+				"sha256": "0287c5c9880e0ab04cc515fed3851dce1d211e55b8cfd3cfb7a3abe3538be283",
+				"strip": 0
+			},
+			"exports": {
+   		   	  	"paths": {
+   		       		"PATH": "bin"
+  		  		},
+				"tools": {
+					"AC6_TOOLCHAIN_6_23_0": "./bin/"
+				}
+      		}
+		},
+		"linux and x64": {
+			"install": {
+				"untar": "https://artifacts.tools.arm.com/arm-compiler/6.23/32/standalone-linux-x86_64-rel.tar.gz",
+				"sha256": "48b2f02ac8941dcac97a5a792b5ddbc9cefcde7b95a39b681ee13f9b321fffe8",
+				"strip": 0
+			}
+		},
+		"linux and arm64": {
+			"install": {
+				"untar": "https://artifacts.tools.arm.com/arm-compiler/6.23/32/standalone-linux-armv8l_64-rel.tar.gz",
+				"sha256": "6aca0f30a2689b4bb85d0081f5f6fd48c89c9b443796f02f220ed08aa2cf7ab3",
+				"strip": 0
+			}
+		},
+		"osx": {
+			"install": {
+				"untar": "https://artifacts.tools.arm.com/arm-compiler/6.23/32/standalone-darwin-x86_64-rel.tar.gz",
+				"sha256": "50c23c44f7c46d08e53da08db13ee708724e001ad8e4c933670ba23a0060ee5a",
+				"strip": 0
+			}
+		},
+		"not windows": {
+			"exports": {
+				"paths": {
+					"PATH": "bin"
+				},
+				"tools": {
+					"AC6_TOOLCHAIN_6_23_0": "./bin/"
+				}
+			}
+		}
+	}
+}

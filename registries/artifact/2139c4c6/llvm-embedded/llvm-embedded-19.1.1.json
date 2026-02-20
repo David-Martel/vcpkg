@@ -1,0 +1,52 @@
+{
+  "id": "compilers/arm/llvm-embedded",
+  "version": "19.1.1",
+  "description": "An LLVM compiler (clang)-based tool suite for C/C++, and assembly programming on 32-bit Arm Cortex-A, Cortex-M, and Cortex-R processors.",
+  "summary": "LLVM Embedded Toolchain for Arm CPUs",
+  "contacts": {
+    "Jonatan Antoni": {
+      "email": "jonatan.antoni@arm.com",
+      "role": "publisher"
+    }
+  },
+  "demands": {
+    "windows": {
+      "install": {
+        "unzip": "https://artifacts.tools.arm.com/llvm-embedded/19.1.1/LLVM-ET-Arm-19.1.1-Windows-x86_64.zip",
+        "sha256": "c071e5bc48b737a92756bfd5c500ae939e01679658aa65cf5578e564c065a091",
+        "strip": 0
+      }
+    },
+    "linux and x64": {
+      "install": {
+        "untar": "https://artifacts.tools.arm.com/llvm-embedded/19.1.1/LLVM-ET-Arm-19.1.1-Linux-x86_64.tar.xz",
+        "sha256": "f659c625302f6d3fb50f040f748206f6fd6bb1fc7e398057dd2deaf1c1f5e8d1",
+        "strip": 1
+      }
+    },
+    "linux and arm64": {
+      "install": {
+        "untar": "https://artifacts.tools.arm.com/llvm-embedded/19.1.1/LLVM-ET-Arm-19.1.1-Linux-AArch64.tar.xz",
+        "sha256": "0172cf1768072a398572cb1fc0bb42551d60181b3280f12c19401d94ca5162e6",
+        "strip": 1
+      }
+    },
+    "osx": {
+      "install": {
+        "untar": "https://artifacts.tools.arm.com/llvm-embedded/19.1.1/LLVM-ET-Arm-19.1.1-Darwin-universal.tar.xz",
+        "sha256": "32780dd99f49f5d78882e799a1466b4d6eb942a5256ce905793cf4ca53d5488d",
+        "strip": 1
+      }
+    },
+    "windows, linux, osx": {
+      "exports": {
+        "paths": {
+          "PATH": "bin"
+        },
+        "tools": {
+          "CLANG_TOOLCHAIN_19_1_1": "./bin/"
+        }
+      }
+    }
+  }
+}

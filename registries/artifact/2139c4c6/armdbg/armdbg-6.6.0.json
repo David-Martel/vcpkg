@@ -1,0 +1,54 @@
+{
+  "id": "debuggers/arm/armdbg",
+  "version": "6.6.0",
+  "description": "A command-line debug server supporting Arm IP and providing Arm-specific awareness in Visual Studio Code.",
+  "summary": "Arm Debugger",
+  "contacts": {
+    "Arron Hartley": {
+      "email": "arron.hartley@arm.com",
+      "role": "publisher"
+    }
+  },
+  "demands": {
+    "windows": {
+      "install": {
+        "unzip": "https://artifacts.tools.arm.com/armdbg/6.6.0/win-x86_64/ArmDebugger.zip",
+        "sha256": "8f2d20197e1053064469b7f1e5628338075a3c4f18880b87a2d3ac2f4293a2cc",
+        "strip": 1
+      },
+      "exports": {
+        "paths": {
+          "PATH": "bin"
+          }
+      }
+    },
+    "linux and x64": {
+      "install": {
+        "unzip": "https://artifacts.tools.arm.com/armdbg/6.6.0/linux-x86_64/ArmDebugger.zip",
+        "sha256": "25fab5e380625313589ca41762d38a53c2bc847369d649a250805ef5dafe4b4d",
+        "strip": 1
+      }
+    },
+    "linux and arm64": {
+      "install": {
+        "unzip": "https://artifacts.tools.arm.com/armdbg/6.6.0/linux-armv8l_64/ArmDebugger.zip",
+        "sha256": "1059220381569813b3e7376f5f2af8310e05e8b64f359a37f4ab5cab8fa5a21b",
+        "strip": 1
+      }
+    },
+    "osx": {
+      "install": {
+        "unzip": "https://artifacts.tools.arm.com/armdbg/6.6.0/darwin-x86_64/ArmDebugger.zip",
+        "sha256": "1327e01cbab08a499de3a2a5e5370a9817076f910ada34b87a7950f328e1ac54",
+        "strip": 1
+      }
+    },
+    "not windows": {
+      "exports": {
+        "paths": {
+          "PATH": "bin"
+        }
+      }
+    }
+  }
+}

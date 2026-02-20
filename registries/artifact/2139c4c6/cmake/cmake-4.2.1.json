@@ -1,0 +1,84 @@
+{
+  "id": "tools/kitware/cmake",
+  "version": "4.2.1",
+  "summary": "Kitware's cmake tool",
+  "description": "CMake is an open-source, cross-platform family of tools designed to build, test and package software. CMake is used to control the software compilation process in the compiler environment of your choice.",
+  "contacts": {
+    "Jonatan Antoni": {
+      "email": "jonatan.antoni@arm.com",
+      "role": "publisher"
+    },
+    "Kitware": {
+      "email": "kitware@kitware.com",
+      "role": "originator"
+    }
+  },
+  "demands": {
+    "windows and x64": {
+      "install": {
+        "unzip": "https://cmake.org/files/v4.2/cmake-4.2.1-windows-x86_64.zip",
+        "sha256": "dfc2b2afac257555e3b9ce375b12b2883964283a366c17fec96cf4d17e4f1677",
+        "strip": 1
+      }
+    },
+    "windows and x86": {
+      "install": {
+        "unzip": "https://cmake.org/files/v4.2/cmake-4.2.1-windows-i386.zip",
+        "sha256": "696129556482da90293f9d64c1fa68dbe06b0ede80331d7da9aaa03aada6aecf",
+        "strip": 1
+      }
+    },
+    "windows and arm64": {
+      "install": {
+        "unzip": "https://cmake.org/files/v4.2/cmake-4.2.1-windows-arm64.zip",
+        "sha256": "96b097ca3a019cd62839d4805958ad0163dd1adedcfbe578730d57c098aaf667",
+        "strip": 1
+      }
+    },
+    "windows": {
+      "exports": {
+        "tools": {
+          "cmake": "bin/cmake.exe",
+          "cmake_gui": "bin/cmake-gui.exe",
+          "ctest": "bin/ctest.exe"
+        },
+        "paths": {
+          "PATH": "bin"
+        }
+      }
+    },
+    "osx": {
+      "install": {
+        "untar": "https://cmake.org/files/v4.2/cmake-4.2.1-macos-universal.tar.gz",
+        "sha256": "0bb18f295e52d7e9309980e361e79e76a1d8da67a1587255cbe3696ea998f597",
+        "strip": 3
+      }
+    },
+    "linux and x64": {
+      "install": {
+        "untar": "https://cmake.org/files/v4.2/cmake-4.2.1-linux-x86_64.tar.gz",
+        "sha256": "c059bff1e97a2b6b5b0c0872263627486345ad0ed083298cb21cff2eda883980",
+        "strip": 1
+      }
+    },
+    "linux and arm64": {
+      "install": {
+        "untar": "https://cmake.org/files/v4.2/cmake-4.2.1-linux-aarch64.tar.gz",
+        "sha256": "3e178207a2c42af4cd4883127f8800b6faf99f3f5187dccc68bfb2cc7808f5f7",
+        "strip": 1
+      }
+    },
+    "not windows": {
+      "exports": {
+        "tools": {
+          "cmake": "bin/cmake",
+          "cmake_gui": "bin/cmake-gui",
+          "ctest": "bin/ctest"
+        },
+        "paths": {
+          "PATH": "bin"
+        }
+      }
+    }
+  }
+}

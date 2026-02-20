@@ -1,0 +1,53 @@
+{
+	"id": "tools/arm/mdk-toolbox",
+	"version": "1.1.0",
+	"description": "MDK utilities for use in pre and post build steps",
+	"summary": "Arm MDK-Toolbox",
+	"contacts": {
+		"Joachim Krech": {
+			"email": "joachim.krech@arm.com",
+			"role": "publisher"
+		},
+		"Arm Support": {
+			"email": "support@arm.com",
+			"role": "originator"
+		}
+	},
+	"demands": {
+		"windows": {
+			"install": {
+				"unzip": "https://artifacts.tools.arm.com/mdk-toolbox/1.1.0/mdk-toolbox-windows-amd64.zip",
+				"sha256": "2e2aacc90b8392b574c969bf66dc20b6dd580384838238148c92b8008080ac52",
+				"strip": 1
+			},
+			"exports": {
+				"paths": {
+					"PATH": "bin"
+				}
+			},
+                        "message": "Documentation: https://github.com/MDK-Packs/Documentation/tree/master/MDK-Toolbox#readme"
+		},
+		"linux and x64": {
+			"install": {
+				"untar": "https://artifacts.tools.arm.com/mdk-toolbox/1.1.0/mdk-toolbox-linux-amd64.tar.gz",
+				"sha256": "f9932539758e1fd8eea99b996853dd17e0f2732a1fa9d4808c3daa73cf9f9a6a",
+				"strip": 1
+			}
+		},
+		"osx": {
+			"install": {
+				"untar": "https://artifacts.tools.arm.com/mdk-toolbox/1.1.0/mdk-toolbox-darwin-amd64.tar.gz",
+				"sha256": "17a93fdbd0311defa696bda94920d6d1e4bd08f26586a64831c411b8a364da86",
+				"strip": 1
+			}
+		},
+		"not windows": {
+			"exports": {
+				"paths": {
+					"PATH": "bin"
+				}
+			},
+                        "message": "Documentation: https://github.com/MDK-Packs/Documentation/tree/master/MDK-Toolbox#readme"
+		}
+	}
+}

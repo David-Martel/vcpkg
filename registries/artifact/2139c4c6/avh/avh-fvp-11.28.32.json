@@ -1,0 +1,50 @@
+{
+        "id": "models/arm/avh-fvp",
+        "version": "11.28.32",
+        "description": "Virtualized models of Arm Cortex-M processors, using Fast Models technology.",
+        "summary": "Arm Virtual Hardware for Cortex®-M based on Fast Models",
+        "demands": {
+                "windows and x64": {
+                        "install": {
+                                "unzip": "https://artifacts.tools.arm.com/avh/11.28.32/avh-windows-x86_11.28_32_Win64.zip",
+                                "sha256": "9d167c0ee7766f218936002bb68beaf0175127613de0e32d0bb7ebc8c20ad35f",
+                                "strip": 1
+                        },
+                        "exports": {
+                                "paths": {
+                                        "PATH": [
+                                                "bin/models",
+                                                "python"
+                                        ]
+                                },
+                                "tools": {
+                                        "AVH_FVP_PLUGINS": "./plugins/"
+                                }
+                        }
+                },
+                "linux and x64": {
+                        "install": {
+                                "untar": "https://artifacts.tools.arm.com/avh/11.28.32/avh-linux-x86_11.28_32_Linux64.tgz",
+                                "sha256": "d79a87f551ea9a4a917f806a0473540d01514662023ec3c00bc2f079d6b6b1a4",
+                                "strip": 1
+                        }
+                },
+                "linux and arm64": {
+                        "install": {
+                                "untar": "https://artifacts.tools.arm.com/avh/11.28.32/avh-linux-aarch64_11.28_32_Linux64_armv8l.tgz",
+                                "sha256": "dcfabbf9984e4ace89c8c7fc1529a6227b4513946169fc5b1cae5c3e5c64e60d",
+                                "strip": 1
+                        }
+                },
+                "not windows": {
+                        "exports": {
+                                "paths": {
+                                        "PATH": "bin"
+                                },
+                                "tools": {
+                                        "AVH_FVP_PLUGINS": "./plugins/"
+                                }
+                      }
+                }
+        }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "compilers/arm/llvm-embedded",
+  "version": "20.1.0",
+  "description": "An LLVM compiler (clang)-based tool suite for C/C++, and assembly programming on 32-bit Arm Cortex-A, Cortex-M, and Cortex-R processors.",
+  "summary": "LLVM Embedded Toolchain for Arm CPUs",
+  "contacts": {
+    "Jonatan Antoni": {
+      "email": "jonatan.antoni@arm.com",
+      "role": "publisher"
+    }
+  },
+  "demands": {
+    "windows": {
+      "install": {
+        "unzip": "https://artifacts.tools.arm.com/llvm-embedded/20.1.0/ATfE-20.1.0-Windows-x86_64.zip",
+        "sha256": "04d8d3a1efd5f4a05e816b4d5d05209a4037cd18112c789496df403ec553f775",
+        "strip": 0
+      }
+    },
+    "linux and x64": {
+      "install": {
+        "untar": "https://artifacts.tools.arm.com/llvm-embedded/20.1.0/ATfE-20.1.0-Linux-x86_64.tar.xz",
+        "sha256": "c1179396608c07bf68f3014923cfdfcd11c8402a3732f310c23d07c9a726b275",
+        "strip": 1
+      }
+    },
+    "linux and arm64": {
+      "install": {
+        "untar": "https://artifacts.tools.arm.com/llvm-embedded/20.1.0/ATfE-20.1.0-Linux-AArch64.tar.xz",
+        "sha256": "2fa9220f64097b71c07e6de2917f33fda1bb736964730786e90a430fdc0fa6be",
+        "strip": 1
+      }
+    },
+    "osx": {
+      "install": {
+        "untar": "https://artifacts.tools.arm.com/llvm-embedded/20.1.0/ATfE-20.1.0-Darwin-universal.tar.xz",
+        "sha256": "4fe035ffa58d2cdc5cbedc312ff6494e2cbcd1658932997dff7d71f377c5b32f",
+        "strip": 1
+      }
+    },
+    "windows, linux, osx": {
+      "exports": {
+        "paths": {
+          "PATH": "bin"
+        },
+        "tools": {
+          "CLANG_TOOLCHAIN_20_1_0": "./bin/"
+        }
+      }
+    }
+  }
+}

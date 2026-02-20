@@ -1,0 +1,46 @@
+{
+  "id": "compilers/iar/cxarm",
+  "version": "9.70.2",
+  "description": "The IAR C/C++ Compiler toolchain, including C-STAT, and the C-SPY debugger, for cloud-oriented and automated environments.",
+  "summary": "IAR Build Tools for arm",
+  "contacts": {
+    "cxarm": {
+      "email": "support.se@iar.com",
+      "role": "originator"
+    }
+  },
+  "demands": {
+    "linux and x64": {
+      "install": {
+        "untar": "https://github.com/iarsystems/arm/releases/download/9.70.2/cxarm-9.70.2-linux-x86_64-base.tar.bz2",
+        "sha256": "dee07feff9145e6a1328cfd07104fba58074ed50aa32f52c06a061198d92abfe",
+        "strip": 1
+      },
+      "exports": {
+        "paths": {
+          "PATH": "arm/bin/"
+        },
+        "tools": {
+          "IAR_TOOLCHAIN_9_70_2": "arm/bin/"
+        }
+      },
+      "message": "Requires a cloud license from IAR. Set the environment variable IAR_LMS_BEARER_TOKEN with a valid Bearer Token."
+    },
+    "windows and x64": {
+      "install": {
+        "unzip": "https://github.com/iarsystems/arm/releases/download/9.70.2/cxarm-9.70.2-windows-x86_64-base.zip",
+        "sha256": "cbd9e426601ad2df7cacb5f16ffaac363c9b39195b668e5adc96ceb9767aaad4",
+        "strip": 1
+      },
+      "exports": {
+        "paths": {
+          "PATH": "arm/bin/"
+        },
+        "tools": {
+          "IAR_TOOLCHAIN_9_70_2": "arm/bin/"
+        }
+      },
+      "message": "Requires a cloud license from IAR. Set the environment variable IAR_LMS_BEARER_TOKEN with a valid Bearer Token."
+    }
+  }
+}
