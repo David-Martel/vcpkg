@@ -1,0 +1,6 @@
+# === Auto-generated rgignore for search speed (2026-02-24) ===
+.git/
+buildtrees/
+packages/
+downloads/
+installed/
